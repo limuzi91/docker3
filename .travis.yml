@@ -1,9 +1,10 @@
 sudo: required
+language: node_js
+node_js:
+  - "8"
 services:
   - docker
-
 before_install:
   - docker build -t muzili/docker3 -f Dockerfile.dev .
-
 script:
-  - docker run muzili/docker3 npm run test -- --coverage
+  - docker run muzili/docker3 npm test
