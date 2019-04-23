@@ -7,4 +7,4 @@ services:
 before_install:
   - docker build -t muzili/docker3 -f Dockerfile.dev .
 script:
-  - docker run muzili/docker3 npm test
+  - docker run muzili/docker3 CI=true npm test -- --coverage
