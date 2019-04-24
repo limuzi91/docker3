@@ -21,6 +21,9 @@ RUN npm run build
 # Specify a base image
 FROM nginx
 
+# Expose docker container port in elasticbeanstalk
+EXPOSE 80 
+
 # Copy something from different Phase
 COPY --from=builder /app/build /usr/share/nginx/html
 
