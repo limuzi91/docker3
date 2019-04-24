@@ -1,6 +1,9 @@
 # Specify a base image
 FROM node:alpine
 
+# Specify environment variable
+ENV CI=true
+
 # Specify a working directory inside container
 WORKDIR /app
 
